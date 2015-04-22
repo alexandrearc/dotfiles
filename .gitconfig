@@ -1,0 +1,33 @@
+[user]
+	name = Alexandre Campinho
+	email = alexandrec@olympic.co.nz
+
+[merge]
+	tool = p4merge
+  keepBackup = false
+	
+[mergetool "p4merge"]
+	cmd = p4merge $BASE $LOCAL $REMOTE $MERGED
+  path = C:/Program Files/Perforce/p4merge.exe
+
+[diff]
+  tool = p4merge
+
+[difftool "p4merge"]
+  cmd = p4merge.exe $LOCAL $REMOTE
+
+[alias]
+  ci = commit
+  st = status
+  br = branch
+  rb = rebase
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+  summary = log --format='%C(red)%h%Creset %Cgreen%s%Creset %C(yellow)(%aN)%Creset%n%b'
+  ct = checkout
+
+[core]
+	autocrlf = true
+	editor = 'C:/Program Files/Sublime Text 2/sublime_text.exe' -w
+	excludesfile = C:\\Users\\alexandrec\\Documents\\gitignore_global.txt
