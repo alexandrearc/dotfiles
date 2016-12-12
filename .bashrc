@@ -7,6 +7,16 @@ remove-alias(){
   sed -i "/^alias $1=/d" ~/.bashrc;
 }
 
+#Paths
+ww="/c/git/Woolworths.Onlineshopping"
+www="/c/git/Woolworths.Onlineshopping/OnlineShopping.WebSite"
+wwa="/c/git/Woolworths.Onlineshopping/OnlineShopping.WebApp"
+
+#Alias
+alias ww="cd $ww"
+alias www="cd $www"
+alias wwa="cd $wwa"
+
 alias cls=clear
 alias refresh-bash='. ~/.bashrc'
 alias gst='git status'
@@ -28,3 +38,8 @@ alias grs='git rebase --skip'
 alias gpl='git log --graph --all --topo-order --decorate --oneline --boundary'
 alias glogme='git log --oneline --author=alexandrec@olympic.co.nz --date=short'
 alias glol='git log --oneline'
+
+wowStory() {
+    git checkout story/WOS-$1
+}
+alias story=wowStory
