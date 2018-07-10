@@ -1,4 +1,5 @@
 #!/bin/bash
+
 add-alias(){
   echo "alias $1='$2'" >> ~/.bashrc;
 }
@@ -8,14 +9,10 @@ remove-alias(){
 }
 
 #Paths
-ww="/c/git/Woolworths.Onlineshopping"
-www="/c/git/Woolworths.Onlineshopping/OnlineShopping.WebSite"
-wwa="/c/git/Woolworths.Onlineshopping/OnlineShopping.WebApp"
+dev="/Users/alexandrearc/Documents/Development/"
 
 #Alias
-alias ww="cd $ww"
-alias www="cd $www"
-alias wwa="cd $wwa"
+alias dev="cd $dev"
 
 alias cls=clear
 alias refresh-bash='. ~/.bashrc'
@@ -26,7 +23,6 @@ alias gfr='git fetch && git rebase'
 alias gco='git checkout'
 alias ll='ls -l'
 alias edit-bashrc='vim ~/.bashrc'
-alias sublime='C:/Program\ Files/Sublime\ Text\ 3/sublime_text.exe'
 alias gca='git add . && git commit -am'
 alias la='ls -a'
 alias gdiff='git diff'
@@ -36,10 +32,5 @@ alias grb='git rebase'
 alias grc='git rebase --continue'
 alias grs='git rebase --skip'
 alias gpl='git log --graph --all --topo-order --decorate --oneline --boundary'
-alias glogme='git log --oneline --author=alexandrec@olympic.co.nz --date=short'
+alias glogme='git log --oneline --author=alexandrearc@gmail.com --date=short'
 alias glol='git log --oneline'
-
-wowStory() {
-    git checkout story/WOS-$1
-}
-alias story=wowStory
